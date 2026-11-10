@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #FFF8F0;
+    color: #35251F;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFF8F0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #DFB4B4;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B89B92;
+  }
+}
+
+/* Subtle paper texture effect */
+.paper-texture {
+  background-color: #FFF8F0;
+  background-image: radial-gradient(#EBCBCB 0.75px, transparent 0.75px), radial-gradient(#C8D5C0 0.75px, #FFF8F0 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.organic-border {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.organic-border-subtle {
+  border-radius: 40px 24px 48px 28px;
+}
+
+/* Vintage stamp edge effect */
+.stamp-border {
+  border: 2px dashed #B89B92;
+}
+
+/* Pinterest card hover lift */
+.pinterest-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pinterest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px -8px rgba(53, 37, 31, 0.12);
+}
